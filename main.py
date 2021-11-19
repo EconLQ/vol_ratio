@@ -40,9 +40,9 @@ def parse_content():
     # url = 'https://www.olx.ua/list/q-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D0%BA%D0%B0%D1%80%D1%82%D0%B0/'
     url = 'https://www.olx.ua/list/q-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D0%BA%D0%B0%D1%80%D1%82%D0%B0/?page={}'
     rows = []
-    for i in range(1, 3):
+    for i in range(1, 4):
         _url = url.format(i)
-        rows += get_content(_url)
+        rows += get_content(url)
         time.sleep(2)
 
     csv_title = ['title', 'price_str', 'price', 'url']
